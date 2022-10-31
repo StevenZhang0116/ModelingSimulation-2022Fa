@@ -84,29 +84,3 @@ function df = cal_complete_state(t,f)
     df(12)=                 - 5*beta_s*f(12) + gamma_v*f(6)                - alpha_v*f(12) + 1*alpha_s*f(11);
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
