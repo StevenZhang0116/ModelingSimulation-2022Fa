@@ -1,5 +1,3 @@
-% Generating examples of HH model.
-% Created by John Meng, 2022
 Inj=20;  % Injection current
 tspan=30;  % Simulating time
 V0= -70; n0=0.3; m0=0.5; h0=0.06;  % Initial values for V, n (K gating variable),
