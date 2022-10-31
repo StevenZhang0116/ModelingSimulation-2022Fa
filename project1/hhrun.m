@@ -1,33 +1,4 @@
 function [V,m,h,n,t] = hhrun(I,tspan, v, mi, hi, ni,Plot)   
-%   This function simulates the Hodgkin-Huxley model for user specified input
-%   current.
-%     
-%   hhrun(I,tspan,V,m,h,n,Plot) function simulates the Hodgkin-Huxley model 
-%   for the squid giant axon for user specified values of the current input,
-%   timespan, initial values of the variables and the solution method. As
-%   output it plots voltage (membrane potential) time series and also the 
-%   plots between three variables V vs. m,n and h. It uses the forward
-%   euler method for solving the ODEs. Enter 1 in the plot field if you
-%   want time series and V vs gating variable plots, 0 otherwise.
-%   
-%   Written by Rohit Chandra, 2014. Modified by John Meng, 2022 for teaching
-%   purpose
-%   Usage:
-%
-%   Example 1 -
-%   
-%   hhrun(0.1, 500, -65, 0.5, 0.06, 0.5,1)
-%   where,
-%   Input current is 0.1 mA
-%   Timespan is 500 ms
-%  -65 0.5 0.06 0.5 are the initial values of V,m,h and n respectively
-%   Will display the voltage time series and limit cycle plots
-%
-%   Example 2 -
-%   [V,m,h,n,t] = hhrun(0.08, 200, -65, 0.4, 0.2, 0.5,0);
-%   V,m,h,n and t vectors will hold the respective values
-%   There will be no plots since plot field is 0 
-%   plot(t,V) will generate the time series plot
 
   dt = 0.01;               % time step for forward euler method
   loop  = ceil(tspan/dt);   % no. of iterations of euler
@@ -144,8 +115,4 @@ end
 function bN = betaN(V)
     bN = 0.125*exp(-(V+65)/80);
 end
-
-
-
-
 
